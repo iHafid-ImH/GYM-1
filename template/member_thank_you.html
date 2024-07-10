@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Success</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arsenal SC", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .Text-01 {
+            font-family: "Arsenal SC", sans-serif;
+        }
+        .return-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: black;
+            border: 1px solid #4f0101;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .return-button:hover {
+            background-color: #4f0101;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="Text-01">Your Member Information Has Been Submitted</h2>
+        <p class="Text-01">Thank you for joining us!</p>
+        <a class="return-button" href="{% url 'home' %}">Go Back To The Main Page</a>
+    </div>
+</body>
+</html>
+

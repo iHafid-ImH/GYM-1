@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .member-box {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .member-box h3 {
+            margin-top: 0;
+        }
+        .member-box p {
+            margin: 5px 0;
+        }
+        .member-box .date {
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Members</h1>
+        {% for member in members %}
+            <div class="member-box">
+                <h3>{{ member.first_name }} {{ member.last_name }}</h3>
+                <p><strong>Email:</strong> {{ member.email }}</p>
+                <p><strong>Phone:</strong> {{ member.phone_number }}</p>
+                <p><strong>Date of Birth:</strong> {{ member.date_of_birth }}</p>
+                <p><strong>Date Joined:</strong> {{ member.date_joined }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

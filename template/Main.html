@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GYM-Website</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 15px 0;
+                text-align: center;
+                font-family: "Arsenal SC", sans-serif;
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+                background-color: #444;
+            }
+            nav a {
+                color: #fff;
+                padding: 15px 20px;
+                text-decoration: none;
+                transition: background 0.3s;
+            }
+            nav a:hover {
+                background-color: #555;
+            }
+            .container {
+                padding: 20px;
+            }
+            .home, .about, .services, .contact {
+                display: none;
+                
+            }
+            .active {
+                display: block;
+            }
+            button {
+                padding: 10px 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #555;
+            }
+            button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button, .Last-button:hover {
+            background-color: #555;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e9f5f5;
+            border: 1px solid #5cb85c;
+            color: #5cb85c;
+        }
+        .Last-button{
+            margin-left: 40px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Our Main GYM Website!</h1>
+        </header>
+        <nav>
+            <a href="#home" onclick="showSection('home')">Home</a>
+            <a href="#about" onclick="showSection('about')">About Us</a>
+            <a href="#services" onclick="showSection('services')">Services</a>
+            <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+        </nav>
+        <div class="container">
+            <section id="home" class="home active">
+                <h2>Home</h2>
+                <p>Welcome to our GYM Website! Here you'll find the best services and equipment.</p>
+                <img src="{% static 'admin/img/photo1.jpg' %}" >
+            </section>
+
+            <section id="about" class="about">
+                <h2>About Us</h2>
+                <p>
+                    Our gym was founded by a team of passionate health and fitness professionals who are committed to providing a unique and outstanding experience for each member. We believe that fitness is not just a physical activity, but a holistic lifestyle that enhances your overall health and happiness.
+                </p>
+            </section>
+
+            <section id="services" class="services">
+                <h2>Services</h2>
+                <p>
+                    Personal Training, Group Classes, Nutritional Counseling, Strength Training, Cardiovascular Exercises, Functional Fitness Program.
+                </p>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Contact Us</h2>
+                <a class="Last-button" href="http://127.0.0.1:8000/contact/">ContactUs Page Here</a>
+            </section>
+        </div>
+        <script>
+            function showSection(sectionId) {
+                var sections = document.querySelectorAll('section');
+                sections.forEach(function(section) {
+                    section.classList.remove('active');
+                });
+                document.getElementById(sectionId).classList.add('active');
+            }
+    
+
+            
+        </script>
+    </body>
+</html>
